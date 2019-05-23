@@ -11,6 +11,10 @@ const AboutContainer = styled.section`
 const Avatar = styled.img`
   height: auto;
   width: 150px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const Bio = styled.div`
@@ -38,7 +42,12 @@ const About = () => {
   return (
     <AboutContainer>
       <Title text='ABOUT' />
-      <Avatar src='./img/me.png' />
+      <Avatar
+        src='./img/me.png'
+        onClick={() =>
+          window.open('https://www.instagram.com/magnusandmyggen', '_blank')
+        }
+      />
       <Bio>
         Quarter warp lateen sail cackle fruit Pirate Round topmast spirits
         tackle skysail rutters. Ho reef sails black spot swab main sheet lanyard
