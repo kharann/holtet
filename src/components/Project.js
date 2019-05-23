@@ -26,6 +26,7 @@ const Image = styled.img`
 
     &:hover {
       filter: blur(0.5rem);
+      cursor: pointer;
     }
   }
 `;
