@@ -1,2 +1,0 @@
-# holtet
-https://holtet.me
