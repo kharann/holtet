@@ -5,11 +5,11 @@ import ProjectGrid from './ProjectGrid';
 
 const App = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
       <About />
       <ProjectGrid />
-    </div>
+    </React.Fragment>
   );
 };
 
