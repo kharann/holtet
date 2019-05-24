@@ -38,12 +38,16 @@ const ProjectGrid = () => {
     <Container>
       <Title text='PROJECTS' desc='Click images to view result.' />
       <MyGrid>
-        <Project src='https://unsplash.it/270' url='https://unsplash.it/270' />
-        <Project src='https://unsplash.it/270' />
-        <Project src='https://unsplash.it/270' />
-        <Project src='https://unsplash.it/270' />
-        <Project src='https://unsplash.it/270' />
-        <Project src='https://unsplash.it/270' />
+        <Project
+          image='./img/projects/sewer.png'
+          site='https://sewer.netlify.com'
+          code='https://github.com/lekesoldat/sewer'
+        />
+        <Project
+          image='./img/projects/droneloan.png'
+          site='http://folk.ntnu.no/magnulho/Courses/IT2085/Project/Final_Delivery/'
+          code='https://github.com/Lekesoldat/DroneLOAN'
+        />
       </MyGrid>
     </Container>
   );
