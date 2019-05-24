@@ -11,8 +11,11 @@ const AboutContainer = styled.section`
 const Avatar = styled.img`
   height: auto;
   width: 150px;
+  /* transition: 0.5s filter; */
 
   &:hover {
+    /* filter: blur(0.2rem); */
+    transform: scale(1.05);
     cursor: pointer;
   }
 `;

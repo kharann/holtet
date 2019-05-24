@@ -1,8 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Div = styled.div`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+
   overflow: hidden;
+`;
+
+const Code = styled.div`
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-width: 0px 1px 1px 1px;
+  border-color: black;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
 `;
 
 const Image = styled.img`
@@ -26,6 +41,7 @@ const Image = styled.img`
 
     &:hover {
       filter: blur(0.5rem);
+      transform: scale(1.05);
       cursor: pointer;
     }
   }
@@ -37,9 +53,13 @@ const handleImageClick = url => {
 
 const Project = ({ src, url, code }) => {
   return (
-    <Div>
+    <Container>
       <Image src={src} onClick={() => handleImageClick(url)} />
-    </Div>
+      <Code>
+        <FontAwesomeIcon icon={faGithub} size='lg' />
+        The Code
+      </Code>
+    </Container>
   );
 };
 
