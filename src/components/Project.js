@@ -6,18 +6,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   overflow: hidden;
 `;
 
 const Code = styled.div`
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-  border-width: 0px 1px 1px 1px;
-  border-color: black;
-  border-style: solid;
-  display: flex;
-  justify-content: center;
-  align-items: space-between;
+  margin-top: 0.1rem;
+  padding: 0.5rem 0.5rem;
+
+  /* color: #fff;
+  background-color: #444444;
+  transition: 0.08s ease-in; */
+
+  background: linear-gradient(to right, #444 50%, whitesmoke 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background-position: left bottom;
+    color: whitesmoke;
+  }
 `;
 
 const Image = styled.img`
@@ -56,8 +64,12 @@ const Project = ({ src, url, code }) => {
     <Container>
       <Image src={src} onClick={() => handleImageClick(url)} />
       <Code>
-        <FontAwesomeIcon icon={faGithub} size='lg' />
-        The Code
+        <FontAwesomeIcon
+          style={{ marginRight: '0.5rem' }}
+          icon={faGithub}
+          size='lg'
+        />
+        The Code Behind
       </Code>
     </Container>
   );
