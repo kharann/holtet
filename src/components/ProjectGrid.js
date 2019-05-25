@@ -36,7 +36,11 @@ const MyGrid = styled.section`
 const ProjectGrid = () => {
   return (
     <Container>
-      <Title text='PROJECTS' desc='Click images to view result.' />
+      <Title
+        text='PROJECTS'
+        desc='Click images to view result.'
+        sizeSensitive='true'
+      />
       <MyGrid>
         <Project
           image='./img/projects/sewer.png'

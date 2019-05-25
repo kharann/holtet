@@ -49,11 +49,19 @@ const Text = styled.h1`
   }
 `;
 
-const Title = ({ text, desc }) => {
+const Title = ({ text, desc, sizeSensitive }) => {
   return (
     <Container>
       <Text>{text}</Text>
-      {window.innerWidth < 900 ? desc ? <p>{desc}</p> : null : null}
+      {sizeSensitive ? (
+        window.innerWidth < 900 ? (
+          desc ? (
+            <p>{desc}</p>
+          ) : null
+        ) : null
+      ) : desc ? (
+        <p>{desc}</p>
+      ) : null}
     </Container>
   );
 };
