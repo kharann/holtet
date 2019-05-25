@@ -53,7 +53,7 @@ const Title = ({ text, desc }) => {
   return (
     <Container>
       <Text>{text}</Text>
-      {desc ? <p>{desc}</p> : null}
+      {window.innerWidth < 900 ? desc ? <p>{desc}</p> : null : null}
     </Container>
   );
 };
