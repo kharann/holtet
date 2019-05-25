@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// Container for the entire component
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,28 +11,29 @@ const Container = styled.div`
 `;
 
 const ImageContainer = styled.div`
+  position: relative;
   overflow: hidden;
   height: 14rem;
   width: 14rem;
 `;
 
-const Code = styled.div`
-  margin-top: 0.1rem;
-  padding: 0.5rem 0.5rem;
+const ImageCover = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
 
-  /* color: #fff;
-  background-color: #444444;
-  transition: 0.08s ease-in; */
+  /* Center content for x and y */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  background: linear-gradient(to right, #444 50%, whitesmoke 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all 0.5s ease-out;
-
-  &:hover {
-    background-position: left bottom;
-    color: whitesmoke;
-    cursor: pointer;
+  :hover > & {
+    opacity: 1;
+    color: red;
   }
 `;
 
@@ -54,13 +56,28 @@ const Image = styled.img`
   /* Desktop */
   @media screen AND (min-width: 901px) {
     width: 17rem;
-    transition: 0.5s filter;
+    transition: all 0.5s filter;
 
-    &:hover {
+    :hover > & {
       filter: blur(0.5rem);
-      transform: scale(0.95);
       cursor: pointer;
     }
+  }
+`;
+
+const Code = styled.div`
+  margin-top: 0.1rem;
+  padding: 0.5rem 0.5rem;
+
+  background: linear-gradient(to right, #444 50%, whitesmoke 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-position: left bottom;
+    color: whitesmoke;
+    cursor: pointer;
   }
 `;
 
@@ -73,6 +90,7 @@ const Project = ({ image, site, code }) => {
     <Container>
       <ImageContainer>
         <Image src={image} onClick={() => handleOnClick(site)} />
+        <ImageCover>Heisann</ImageCover>
       </ImageContainer>
       <Code onClick={() => handleOnClick(code)}>
         <FontAwesomeIcon
