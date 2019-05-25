@@ -31,9 +31,11 @@ const ImageCover = styled.div`
   justify-content: center;
   align-items: center;
 
-  :hover > & {
-    opacity: 1;
-    color: red;
+  @media screen AND (min-width: 901px) {
+    *:hover > & {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -58,9 +60,8 @@ const Image = styled.img`
     width: 17rem;
     transition: all 0.5s filter;
 
-    :hover > & {
+    *:hover > & {
       filter: blur(0.5rem);
-      cursor: pointer;
     }
   }
 `;
@@ -88,9 +89,9 @@ const handleOnClick = url => {
 const Project = ({ image, site, code }) => {
   return (
     <Container>
-      <ImageContainer>
-        <Image src={image} onClick={() => handleOnClick(site)} />
-        <ImageCover>Heisann</ImageCover>
+      <ImageContainer onClick={() => handleOnClick(site)}>
+        <Image src={image} />
+        <ImageCover>Click to visit page!</ImageCover>
       </ImageContainer>
       <Code onClick={() => handleOnClick(code)}>
         <FontAwesomeIcon
