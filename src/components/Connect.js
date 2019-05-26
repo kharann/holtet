@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Title from './Title';
+import {
+  faLinkedin,
+  faInstagram,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Container = styled.div`
   display: flex;
@@ -9,6 +15,7 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
+  /* Mobile */
   padding: 0.2rem 2rem;
   font-size: 18px;
   -webkit-transition-duration: 0.4s; /* Safari */
@@ -35,10 +42,32 @@ const Button = styled.button`
   }
 `;
 
+const SocialMedia = styled.section`
+  padding: 1rem 0rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  flex: 1;
+`;
+
 const handleConnectClick = email => {
   return (window.location.href =
     'mailto:' + email + "?subject=Hello Magnus, let's get in touch!");
 };
+
+const handleSocialMediaClick = url => {
+  window.open(url, '_blank');
+};
+
+const Icon = styled(FontAwesomeIcon)`
+  /* Desktop */
+  @media screen AND (min-width: 901px) {
+    &:hover {
+      transition-duration: 0.4s;
+      color: #f56d2a;
+    }
+  }
+`;
 
 const Connect = () => {
   return (
@@ -47,6 +76,34 @@ const Connect = () => {
       <Button onClick={() => handleConnectClick('magnuslholtet@gmail.com')}>
         Get in touch!
       </Button>
+      <SocialMedia>
+        <Icon
+          onClick={() =>
+            handleSocialMediaClick('https://instagram.com/magnusandmyggen')
+          }
+          style={{ marginRight: '0.5rem' }}
+          icon={faInstagram}
+          size='lg'
+        />
+        <Icon
+          onClick={() =>
+            handleSocialMediaClick('https://github.com/Lekesoldat')
+          }
+          style={{ marginRight: '0.5rem' }}
+          icon={faGithub}
+          size='lg'
+        />
+        <Icon
+          onClick={() =>
+            handleSocialMediaClick(
+              'https://www.linkedin.com/in/magnus-lauritzen-holtet-07398b177'
+            )
+          }
+          style={{ marginRight: '0.5rem' }}
+          icon={faLinkedin}
+          size='lg'
+        />
+      </SocialMedia>
     </Container>
   );
 };
