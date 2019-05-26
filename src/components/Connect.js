@@ -9,7 +9,7 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  padding: 0.8rem 5rem;
+  padding: 0.2rem 2rem;
   font-size: 18px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -22,6 +22,16 @@ const Button = styled.button`
   &:hover {
     background-color: #4caf50;
     color: white;
+  }
+
+  /* Tablet */
+  @media screen AND (min-width: 600px) AND (max-width: 900px) {
+    padding: 0.3rem 3rem;
+  }
+
+  /* Desktop */
+  @media screen AND (min-width: 901px) {
+    padding: 0.3rem 3rem;
   }
 `;
 
