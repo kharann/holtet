@@ -65,6 +65,7 @@ const Icon = styled(FontAwesomeIcon)`
     &:hover {
       transition-duration: 0.4s;
       color: #f56d2a;
+      cursor: pointer;
     }
   }
 `;
