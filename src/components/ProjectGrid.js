@@ -13,7 +13,6 @@ const Container = styled.section`
 
 const MyGrid = styled.section`
   /* Mobile */
-
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -30,7 +29,7 @@ const MyGrid = styled.section`
 
   /* Desktop */
   @media screen AND (min-width: 901px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
   }
 `;
 
