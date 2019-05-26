@@ -8,7 +8,7 @@ const Container = styled.section`
   align-items: center;
   flex-direction: column;
   flex: 1;
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 2rem;
 `;
 
 const MyGrid = styled.section`
