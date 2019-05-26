@@ -53,13 +53,7 @@ const Title = ({ text, desc, sizeSensitive }) => {
   return (
     <Container>
       <Text>{text}</Text>
-      {sizeSensitive ? (
-        window.innerWidth < 900 ? (
-          desc ? (
-            <p>{desc}</p>
-          ) : null
-        ) : null
-      ) : desc ? (
+      {desc && (!sizeSensitive || window.innerWidth < 900) ? (
         <p>{desc}</p>
       ) : null}
     </Container>
