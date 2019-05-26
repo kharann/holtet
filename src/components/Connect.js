@@ -84,7 +84,7 @@ const Connect = () => {
           }
           style={{ marginRight: '0.5rem' }}
           icon={faInstagram}
-          size='lg'
+          size={window.innerWidth < 900 ? '2x' : '3x'}
         />
         <Icon
           onClick={() =>
@@ -92,7 +92,7 @@ const Connect = () => {
           }
           style={{ marginRight: '0.5rem' }}
           icon={faGithub}
-          size='lg'
+          size={window.innerWidth < 900 ? '2x' : '3x'}
         />
         <Icon
           onClick={() =>
@@ -102,7 +102,7 @@ const Connect = () => {
           }
           style={{ marginRight: '0.5rem' }}
           icon={faLinkedin}
-          size='lg'
+          size={window.innerWidth < 900 ? '2x' : '3x'}
         />
       </SocialMedia>
     </Container>
