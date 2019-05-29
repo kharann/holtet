@@ -24,28 +24,10 @@ const HeaderContainer = styled.section`
     height: 7rem;
   }
 
-  background-image: url('./img/headerBG.png');
+  background-image: url('./img/bridgeWp.jpg');
   background-size: cover;
   background-position: center;
 `;
-
-// const Logo = styled.img`
-//   /* Mobile */
-//   margin: 1rem 0 0.7rem 0;
-//   width: 13.5rem;
-
-//   /* Tablet */
-//   @media screen AND (min-width: 600px) AND (max-width: 900px) {
-//     width: 21rem;
-//     margin: 2rem 0 1rem 0;
-//   }
-
-//   /* Desktop */
-//   @media screen AND (min-width: 901px) {
-//     margin: 2rem 0 0.7rem 0;
-//     width: 33rem;
-//   }
-// `;
 
 const Name = styled.h1`
   color: whitesmoke;
@@ -55,7 +37,6 @@ const Name = styled.h1`
 const Header = () => {
   return (
     <HeaderContainer>
-      {/* <Logo src='./img/logoTransparrent.png' /> */}
       <Name>
         Magnus{' '}
         <span style={{ color: '#F56D29', fontFamily: 'Shadows Into Light' }}>
