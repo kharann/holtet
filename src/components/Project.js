@@ -82,13 +82,21 @@ const Code = styled.div`
   }
 `;
 
+const Title = styled.div`
+  background: whitesmoke 50%;
+  text-align: center;
+  padding: 0.6rem 0;
+  text-shadow: 0 0 32px black; /* Slight glow */
+`;
+
 const handleOnClick = url => {
   window.open(url, '_blank');
 };
 
-const Project = ({ image, site, code }) => {
+const Project = ({ title, image, site, code }) => {
   return (
     <Container>
+      <Title>{title}</Title>
       <ImageContainer onClick={() => handleOnClick(site)}>
         <Image src={image} />
         <ImageCover>Click to visit page!</ImageCover>

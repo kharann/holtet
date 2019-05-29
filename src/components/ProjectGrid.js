@@ -43,11 +43,19 @@ const ProjectGrid = () => {
       />
       <MyGrid>
         <Project
+          title='Documents from NTNU'
+          image='./img/projects/ntnu.png'
+          site='https://github.com/Lekesoldat/NTNU'
+          code='https://github.com/Lekesoldat/NTNU'
+        />
+        <Project
+          title='Sewer - a nagging tracker.'
           image='./img/projects/sewer.png'
           site='https://sewer.netlify.com'
           code='https://github.com/lekesoldat/sewer'
         />
         <Project
+          title='DroneLOAN'
           image='./img/projects/droneloan.png'
           site='http://folk.ntnu.no/magnulho/Courses/IT2085/Project/Final_Delivery/'
           code='https://github.com/Lekesoldat/DroneLOAN'
