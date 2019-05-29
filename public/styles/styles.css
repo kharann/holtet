@@ -3,3 +3,9 @@
 * {
   font-family: 'Open Sans', sans-serif;
 }
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-bottom: 1rem;
+}

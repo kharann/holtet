@@ -7,10 +7,6 @@ const Container = styled.div`
   flex-direction: column;
 
   & p {
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    padding-bottom: 1rem;
-
     /* Mobile */
     font-size: 12px;
 

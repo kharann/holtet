@@ -23,7 +23,7 @@ const Avatar = styled.img`
 const Bio = styled.div`
   /* Mobile */
   width: 20rem;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0 0.5rem 0;
   text-align: center;
 
   /* Anything below desktop size*/
@@ -52,9 +52,14 @@ const About = () => {
         }
       />
       <Bio>
-        Quarter warp lateen sail cackle fruit Pirate Round topmast spirits
-        tackle skysail rutters. Ho reef sails black spot swab main sheet lanyard
-        chase guns six pounders matey lugsail. Jack chase Admiral.
+        <p>
+          My name is Magnus, and I am currently studying Informatics at the
+          Norwegian University of Science and Technology (NTNU). My goal is to
+          become a full stack developer, but at the moment I'm mostly focusing
+          on front end development.
+        </p>
+
+        <p>In particular I prefer React, Java and Python.</p>
       </Bio>
     </AboutContainer>
   );
