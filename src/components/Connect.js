@@ -56,7 +56,7 @@ const handleConnectClick = email => {
 };
 
 const handleSocialMediaClick = url => {
-  window.open(url, '_blank');
+  window.open(url);
 };
 
 const Icon = styled(FontAwesomeIcon)`
