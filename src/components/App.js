@@ -15,13 +15,15 @@ const Main = styled.main`
 
 const App = () => {
   return (
-    <Main>
+    <>
       <Header />
-      <About />
-      <ProjectGrid />
-      <Connect />
+      <Main>
+        <About />
+        <ProjectGrid />
+        <Connect />
+      </Main>
       <Footer />
-    </Main>
+    </>
   );
 };
 
