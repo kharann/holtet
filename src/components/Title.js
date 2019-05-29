@@ -29,8 +29,7 @@ const Container = styled.div`
 const Text = styled.h1`
   /* Mobile */
   font-size: 24px;
-
-  /* Anything below desktop size*/
+  font-family: 'Shadows Into Light'; /* Anything below desktop size*/
   @media screen AND (max-width: 900px) {
   }
 
